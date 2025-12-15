@@ -29,6 +29,18 @@ def second_derivatives(image):
     return img_xx, img_yy
 
 def first_derivatives(image):
+    '''directional derivative in the x and y directions
+
+    Parameters
+    ----------
+    image : ArrayLike
+        a 2D image 
+
+    Returns
+    -------
+    _type_
+        _description_
+    '''
 
     p = jnp.array([ 0.030320,  0.249724, 0.439911, 0.249724, 0.030320])
     d = jnp.array([-0.104550, -0.292315, 0,        0.292315, 0.104550])
