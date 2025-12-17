@@ -1,9 +1,13 @@
+import cv2
 import jax, functools 
 from jax import numpy as jnp
 from jax import Array
 from jax.typing import ArrayLike
 from jax.scipy import signal
 from jax.image import resize
+
+def rgb_to_greyscale(image):
+    return cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 
 
 def sepfir2(image, hx, hy):
